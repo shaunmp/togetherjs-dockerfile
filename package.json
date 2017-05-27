@@ -9,6 +9,6 @@
   "dependencies": {
     "websocket": "1.0.24",
     "optimist": "0.6.1",
-    "websocket-server": "miksago/node-websocket-server#master"
+    "websocket-server": "ThisIsMissEm/node-websocket-server#master"
   }
 }
