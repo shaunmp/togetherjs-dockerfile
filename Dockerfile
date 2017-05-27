@@ -3,7 +3,6 @@ LABEL maintainer shaun@shaun.io
 
 RUN apk add --update nodejs nodejs-npm
 
-WORKDIR ["/app"]
 RUN npm install websocket
 RUN npm install optimist
 
