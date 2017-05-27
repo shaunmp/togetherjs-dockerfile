@@ -9,5 +9,5 @@ ADD "https://raw.githubusercontent.com/mozilla/togetherjs/master/hub/server.js" 
 
 EXPOSE 8080
 
-ENTRYPOINT["node", "/app/server.js"]
+ENTRYPOINT ["node", "/app/server.js"]
 
