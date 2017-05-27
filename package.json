@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "websocket": "1.0.24",
+    "ws": "3.0.0",
     "optimist": "0.6.1"
   }
 }
