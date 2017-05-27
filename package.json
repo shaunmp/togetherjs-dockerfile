@@ -4,7 +4,7 @@
   "description": "Docker TogetherJS",
   "main": "server.js",
   "scripts": {
-    "start": "node hub/server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "websocket": "1.0.24",

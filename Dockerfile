@@ -1,7 +1,7 @@
 FROM node
 LABEL maintainer shaun@shaun.io
 
-RUN mkdir -p /usr/src/app/hub
+RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
 
@@ -12,8 +12,8 @@ COPY . /usr/src/app
 
 EXPOSE 8080
 
-ADD "https://github.com/mozilla/togetherjs/raw/develop/hub/websocket-compat.js" "hub/websocket-compat.js"
-ADD "https://raw.githubusercontent.com/mozilla/togetherjs/master/hub/server.js" "hub/server.js"
+ADD "websocket-compat.js" "websocket-compat.js"
+ADD "server.js" "server.js"
 
 EXPOSE 8080
 
