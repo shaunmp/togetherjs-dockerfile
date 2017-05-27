@@ -1,15 +1,21 @@
-FROM alpine:latest
+FROM node
 LABEL maintainer shaun@shaun.io
 
-RUN apk add --update nodejs nodejs-npm
+RUN mkdir -p /usr/src/app
 
-RUN npm install websocket
-RUN npm install optimist
+WORKDIR /usr/src/app
+
+COPY package.json /usr/src/app/
+RUN npm install
+
+COPY . /usr/src/app
+
+EXPOSE 8080
 
 ADD "https://github.com/mozilla/togetherjs/raw/develop/hub/websocket-compat.js" "websocket-compat.js"
 ADD "https://raw.githubusercontent.com/mozilla/togetherjs/master/hub/server.js" "server.js"
 
 EXPOSE 8080
 
-ENTRYPOINT ["node", "server.js"]
+CMD [ "npm", "start" ]
 
